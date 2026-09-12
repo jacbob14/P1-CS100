@@ -70,7 +70,12 @@ print("""that's my best game.""")
 #       Duration: 42 min
 #       MVP: yes
 #   ========================================
-
+print(f"""
+Match Notes:
+    Map: {game_map}
+    Duration: {minutes} min
+    MVP: yes
+""")
 
 # =============================================================
 # TARGET OUTPUT

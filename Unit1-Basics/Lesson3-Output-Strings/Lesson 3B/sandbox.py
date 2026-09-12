@@ -22,12 +22,12 @@ score = 8400
 
 # TODO 1: Use ONE f-string to print exactly:
 #         Nova reached level 12 with 8400 points!
-
+print(f"{player} reacher level {level} with {score} points!")
 
 # TODO 2: Print the score doubled. Do the math INSIDE the braces -
 #         do not make a new variable.
 #         Double score: 16800
-
+print(f"Double score: {score * 2}")
 
 # =============================================================
 # SPACE TO EXPERIMENT
