@@ -31,7 +31,7 @@ Expected output, guessing 10, 20, 30, 40, 50, 60, 70:
 """
 
 import random
-random.seed(5)          # remove this line to play for real
+random.seed(188)          # remove this line to play for real
 
 # TODO 1: pick the secret - a random whole number from 1 to 100.
 #         Careful: randint includes BOTH ends.
@@ -39,9 +39,9 @@ num = random.randint(1, 100)
 
 # TODO 2: the priming read. Ask for the first guess, and set attempts to 1.
 #         The prompt is:  "Guess (1-100): "
-max_guesses = 10
+current_guesses = 10
 guesses = 0
-guess = int(input(f"{max_guesses} guesses left. Guess (1-100): "))
+guess = int(input(f"{current_guesses} guesses left. Guess (1-100): "))
 got_correct = True
 
 
@@ -50,11 +50,11 @@ got_correct = True
 while guess != num:
     if guess < 1 or guess > 100:
         print("Please input a number between 1 and 100")
-        guess = int(input(f"{max_guesses} guesses left. Guess (1-100): "))
+        guess = int(input(f"{current_guesses} guesses left. Guess (1-100): "))
         continue
     guesses += 1
-    max_guesses -= 1
-    if max_guesses <= 0:
+    current_guesses -= 1
+    if current_guesses <= 0:
         print(f"Out of guesses! The number was {num}")
         got_correct = False
         break
@@ -63,7 +63,7 @@ while guess != num:
         print("Too high")
     elif guess < num:
         print("Too low")
-    guess = int(input(f"{max_guesses} guesses left. Guess (1-100): "))
+    guess = int(input(f"{current_guesses} guesses left. Guess (1-100): "))
 
 if got_correct:
     print("=========")
