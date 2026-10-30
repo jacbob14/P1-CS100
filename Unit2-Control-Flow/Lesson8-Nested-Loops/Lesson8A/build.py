@@ -22,23 +22,27 @@ And typing 1 then 1:
 """
 
 # TODO 1: ask for the width and the height (use int())
-
+width = int(input("Enter width: "))
+height = int(input("Height: "))
 
 # TODO 2: set up a counter BEFORE the loops
-
+count = 0
 
 # TODO 3: the outer loop - one lap per row
-
+for row in range(height):
 
     # TODO 4: the inner loop - one lap per column.
     #         Print one # with end="", and add 1 to the counter.
-
+    for col in range(width):
+        print("#", end = "")
+        count += 1
+    
 
     # TODO 5: end the row - print() belongs to the OUTER loop
-
+    print()
 
 # TODO 6: after both loops, print the count
-
+print(count)
 
 # ---------- STRETCH (optional) ----------
 # Draw a HOLLOW box: # only on the edges, spaces inside.
@@ -49,3 +53,7 @@ And typing 1 then 1:
 #
 # Hint: a cell is on an edge if it's in the first or last row,
 # or the first or last column.
+if height % 2 == 0:
+    print("even")
+else:
+    print("odd")
