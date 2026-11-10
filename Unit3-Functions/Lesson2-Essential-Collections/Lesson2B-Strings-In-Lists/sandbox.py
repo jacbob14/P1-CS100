@@ -14,6 +14,8 @@ print(len(word))            # 6
 # YOUR TURN: add two lines that print
 #   the first three letters   -> pyt
 #   the last two letters      -> on
+print(word[:3])
+print(word[-2:])
 
 
 # ---------- Code Along 2: methods give you a NEW string ----------
@@ -25,7 +27,10 @@ print(len(name))                          # 16   name itself never changed
 
 # YOUR TURN: split the stripped name into a list and print how many
 # words there are  -> 2
+words = name.strip().split()
+print(len(words))
 
-
+    
 # ---------- Code Along 3: count (if you finish early) ----------
 # Use .count to print how many times "a" appears in "banana"   -> 3
+print("banana".count("a"))
